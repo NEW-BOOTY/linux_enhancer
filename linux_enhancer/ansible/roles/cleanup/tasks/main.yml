@@ -1,0 +1,9 @@
+---
+# Cleanup Role Tasks
+# Copyright © 2025 Devin B. Royal.
+# All Rights Reserved.
+
+- name: Autoremove unnecessary packages
+  apt:
+    autoremove: yes
+  when: ansible_os_family == "Debian"

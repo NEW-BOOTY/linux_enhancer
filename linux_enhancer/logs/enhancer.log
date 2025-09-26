@@ -1,0 +1,6 @@
+[2025-09-26 09:42:29] === GOD-MODE++ Linux Enhancer Started ===
+[2025-09-26 09:42:29] Dependency terraform missing. Installing...
+[2025-09-26 09:42:29] ERROR: Unsupported package manager. Please install terraform manually.
+[2025-09-26 09:43:25] === GOD-MODE++ Linux Enhancer Started ===
+[2025-09-26 09:43:25] Dependency ansible missing. Installing...
+[2025-09-26 09:43:25] ERROR: Unsupported package manager. Please install ansible manually.

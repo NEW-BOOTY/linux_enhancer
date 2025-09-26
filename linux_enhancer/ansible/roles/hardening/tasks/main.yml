@@ -1,0 +1,9 @@
+---
+# Hardening Role Tasks
+# Copyright © 2025 Devin B. Royal.
+# All Rights Reserved.
+
+- name: Enable UFW firewall
+  ufw:
+    state: enabled
+    policy: deny

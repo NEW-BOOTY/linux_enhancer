@@ -1,0 +1,16 @@
+---
+# Backup Role Tasks
+# Copyright © 2025 Devin B. Royal.
+# All Rights Reserved.
+
+- name: Ensure backup directory exists
+  file:
+    path: "{{ ansible_env.HOME }}/backups"
+    state: directory
+
+- name: Create compressed backup
+  archive:
+    path:
+      - "{{ ansible_env.HOME }}/Documents"
+      - "{{ ansible_env.HOME }}/Pictures"
+    dest: "{{ ansible_env.HOME }}/backups/backup_{{ ansible_date_time.iso8601 }}.tar.gz"

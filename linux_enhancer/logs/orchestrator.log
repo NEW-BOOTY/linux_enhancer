@@ -1,0 +1,20 @@
+[2025-09-26 10:14:30] === Orchestrator Starting ===
+[2025-09-26 10:14:30] Dependency terraform found.
+[2025-09-26 10:14:30] Running Terraform...
+[2025-09-26 10:35:17] === GOD-MODE Orchestrator Starting ===
+[2025-09-26 10:35:18] terraform found.
+[2025-09-26 10:35:18] aws missing. Installing...
+[2025-09-26 10:35:44] node found.
+[2025-09-26 10:35:44] cdk missing. Installing...
+[2025-09-26 10:35:50] ansible found.
+[2025-09-26 10:35:50] vault missing. Installing...
+[2025-09-26 10:41:57] === GOD-MODE Orchestrator Starting ===
+[2025-09-26 10:41:57] terraform found.
+[2025-09-26 10:41:57] aws found.
+[2025-09-26 10:41:57] node found.
+[2025-09-26 10:41:57] cdk found.
+[2025-09-26 10:41:57] ansible found.
+[2025-09-26 10:41:57] Downloading Vault for macOS...
+[2025-09-26 10:42:07] Vault installed to /usr/local/bin
+[2025-09-26 10:42:13] Retrieving AWS credentials from Vault...
+[2025-09-26 10:42:14] ERROR: No AWS credentials found. Please set env variables or configure Vault.

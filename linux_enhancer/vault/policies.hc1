@@ -1,0 +1,16 @@
+# Vault Policy - GOD-MODE++
+# Copyright © 2025 Devin B. Royal.
+# All Rights Reserved.
+
+# Vault policy for Linux Enhancer
+path "secret/data/aws" {
+  capabilities = ["read", "list"]
+}
+
+path "secret/data/linux_enhancer/*" {
+  capabilities = ["create", "read", "update", "delete", "list"]
+}
+
+path "sys/mounts" {
+  capabilities = ["read"]
+}

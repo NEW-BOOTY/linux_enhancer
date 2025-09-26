@@ -1,0 +1,41 @@
+---
+# Remote Enhancer Playbook
+# Copyright © 2025 Devin B. Royal.
+# All Rights Reserved.
+
+- name: Linux Enhancer Remote Tasks
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Ensure backup folder exists
+      file:
+        path: /opt/linux_enhancer_backups
+        state: directory
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Pull AWS credentials from Vault
+      set_fact:
+        aws_access_key_id: "{{ lookup('hashi_vault', 'secret=secret/aws:aws_access_key_id') }}"
+        aws_secret_access_key: "{{ lookup('hashi_vault', 'secret=secret/aws:aws_secret_access_key') }}"
+
+    - name: Configure systemd timer for backups
+      copy:
+        dest: /etc/systemd/system/linux_enhancer_backup.timer
+        content: |
+          [Unit]
+          Description=Linux Enhancer Backup Timer
+
+          [Timer]
+          OnCalendar=daily
+          Persistent=true
+
+          [Install]
+          WantedBy=timers.target
+      notify:
+        - Reload systemd
+
+  handlers:
+    - name: Reload systemd
+      command: systemctl daemon-reload

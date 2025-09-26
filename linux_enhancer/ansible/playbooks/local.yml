@@ -1,0 +1,17 @@
+---
+# Local Enhancer Playbook
+# Copyright © 2025 Devin B. Royal.
+# All Rights Reserved.
+
+- name: Linux Enhancer Local Tasks
+  hosts: localhost
+  gather_facts: yes
+  tasks:
+    - name: Cleanup old logs
+      file:
+        path: /var/log/linux_enhancer/
+        state: absent
+    - name: Create backup folder
+      file:
+        path: ~/backups
+        state: directory

@@ -1,0 +1,11 @@
+[Unit]
+Description=Linux Enhancer GOD-MODE++
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/bash /path/to/linux_enhancer.sh
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target

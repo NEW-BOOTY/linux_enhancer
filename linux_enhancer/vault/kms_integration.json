@@ -1,0 +1,5 @@
+{
+  "kms_key_id": "alias/enhancer-backup-key",
+  "vault_policy": "enhancer-policy",
+  "rotation_period_days": 30
+}
