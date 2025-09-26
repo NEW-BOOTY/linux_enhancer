@@ -1,0 +1,23 @@
+linux_enhancer/
+├── orchestrator.sh
+├── terraform/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── cdk/
+│       ├── package.json
+│       ├── cdk.json
+│       └── lib/
+│           └── s3_stack.js
+├── ansible/
+│   ├── playbooks/
+│   │   ├── local.yml
+│   │   └── remote.yml
+│   └── roles/
+│       ├── backup/
+│       ├── cleanup/
+│       └── hardening/
+└── vault/
+    ├── policies.hcl
+    └── secrets/
+        └── aws_kms.json
